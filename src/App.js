@@ -1,24 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.scss";
+import "./App.css";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Registration/Registration";
+import Navbar from "./Pages/Components/Navbar/Navbar";
+import LeftBar from "./Pages/Components/Leftbar/Leftbar";
+import RightBar from "./Pages/Components/Rightbar/Rightbar";
+import Home from "./Pages/Home/Home";
+import Profile from "./Pages/Profile/Profile";
+import { useContext } from "react";
+import { DarkModeContext } from "./Pages/Context/darkModeContext";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+  const currentUser = true;
+  const { darkMode } = useContext(DarkModeContext);
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+
+    return children;
+  };
+
+  const Layout = () => {
+    return (
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
+        <Navbar />
+        <div
+          style={{
+            display: "flex",
+            marginTop: "0px",
+            backgroundColor: "#fafafa",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <LeftBar />
+          <div style={{ flex: 6, marginLeft: "270px" }}>
+            <Outlet />
+          </div>
+          <RightBar />
+        </div>
+      </div>
+    );
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/profile/:id",
+          element: <Profile />,
+        },
+      ] /* */,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/registration",
+      element: <Register />,
+    },
+  ]);
+
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

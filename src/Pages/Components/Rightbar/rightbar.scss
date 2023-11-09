@@ -1,0 +1,67 @@
+.rightbar{
+    flex: 3;
+    position: sticky;
+    top: 71px;
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 10px;
+    
+    &::-webkit-scrollbar{display: none;}
+   
+
+    .container {
+        padding: 20px;
+        border:  1px solid #f2f2f2;
+        margin-right: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        background-color: #ffffff;
+        .item{
+            margin-bottom: 20px;
+            .MemuTag{
+                color: #aeaeae;
+            }
+
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+
+
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap:10px;
+
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .trend{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+                cursor: pointer;
+
+                .trendingNumber{
+                    font-size: 11px;
+                    color: #aeaeae;
+                }
+            }
+        }
+    }
+
+    .footer{
+        font-size: 11px;
+        margin-top: 20px;
+        display: flex;
+        margin-bottom: 220px;
+    }
+}
