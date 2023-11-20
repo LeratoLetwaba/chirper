@@ -1,15 +1,30 @@
 import "./navbar.scss";
 import logo from "../../../images/bird-04.png";
+import { useContext } from "react";
+import { DarkModeContext } from "../../Context/darkModeContext";
+import logoWhite from "../../../images/bird-05.png";
 
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/">
-          <img src={logo} alt="Logo" width="100px" />
-        </Link>
+     
+        {darkMode ? (
+          <>
+            <Link to="/">
+              <img src={logoWhite} alt="Logo" width="100px" />
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link to="/">
+              <img src={logo} alt="Logo" width="100px" />
+            </Link>
+          </>
+        )}
 
         {/**   <span class="material-symbols-outlined">
 tag

@@ -51,6 +51,7 @@
             font-weight: bold;
             span{
                 color: themed("textColor");
+                cursor: pointer;
             }
             img{
                 width: 30px;
@@ -64,6 +65,7 @@
 
     .Nav-Icon{
         color: themed("textColor");
+        cursor: pointer;
     }
 }
 }

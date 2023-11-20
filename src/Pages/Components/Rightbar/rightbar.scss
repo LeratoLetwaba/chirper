@@ -1,4 +1,6 @@
+@import "../../../style.scss";
 .rightbar{
+    @include themify($themes){
     flex: 3;
     position: sticky;
     top: 71px;
@@ -11,11 +13,11 @@
 
     .container {
         padding: 20px;
-        border:  1px solid #f2f2f2;
+        border:  1px solid themed("border");
         margin-right: 20px;
         border-radius: 10px;
         margin-top: 20px;
-        background-color: #ffffff;
+        background-color: themed("bg");
         .item{
             margin-bottom: 20px;
             .MemuTag{
@@ -40,6 +42,9 @@
                         border-radius: 50%;
                         object-fit: cover;
                     }
+                .span {
+                    color: themed("textColor");
+                }
                 }
             }
 
@@ -49,11 +54,15 @@
                 justify-content: space-between;
                 margin: 20px 0px;
                 cursor: pointer;
+                color: themed("textColor");
 
                 .trendingNumber{
                     font-size: 11px;
                     color: #aeaeae;
                 }
+            }
+            .trend:hover{
+                color: themed("textLinkColor");
             }
         }
     }
@@ -63,5 +72,23 @@
         margin-top: 20px;
         display: flex;
         margin-bottom: 220px;
+        color: themed("textColor");
     }
+
+    .followName{
+        color: themed("textColor");
+    }
+
+    .hrColor{
+      border-bottom: 1px solid themed("border");
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+}
+
+
+
 }

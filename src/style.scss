@@ -4,14 +4,18 @@ $themes:(
         bg:white,
         bgSoft:#f7f7f7,
         textColorSoft:#aeaeae,
-        border:#f2f2f2
+        border:#f2f2f2,
+        textLinkColor:#3f2259,
+        sidebarBgLink:#f1f1f1,
     ),
     dark:(
         textColor:white,
         bg:#231f20,
         bgSoft:#333,
         textColorSoft:#aeaeae,
-        border:#444
+        border:#444,
+        textLinkColor:#ab8bbd,
+        sidebarBgLink:#444
     ),
 );
 

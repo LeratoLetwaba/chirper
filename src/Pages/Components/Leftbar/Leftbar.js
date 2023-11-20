@@ -9,38 +9,38 @@ const Leftbar = () => {
       <div className="container">
         <div className="menu">
           <div className="items">
-            <span className="material-symbols-rounded">tag</span>
+            <span className="material-symbols-rounded rightLink">tag</span>
             <span>Trending</span>
           </div>
           <div className="items">
-            <span className="material-symbols-rounded">mail</span>
+            <span className="material-symbols-rounded rightLink">mail</span>
             <span>Messsages</span>
           </div>
           <div className="items">
-            <span className="material-symbols-rounded">favorite</span>
+            <span className="material-symbols-rounded rightLink">favorite</span>
             <span>Saved</span>
           </div>
           <div className="items">
-            <span className="material-symbols-rounded">group</span>
+            <span className="material-symbols-rounded rightLink">group</span>
             <span>Followers</span>
           </div>
 
           <div className="items">
-            <span className="material-symbols-rounded">add_reaction</span>
+            <span className="material-symbols-rounded rightLink">add_reaction</span>
             <span>Following</span>
           </div>
 
           <div className="items">
-            <span className="material-symbols-rounded">description</span>
+            <span className="material-symbols-rounded rightLink">description</span>
             <span>CV</span>
           </div>
         </div>
 
-        <hr />
+        <hr className="hrColor" />
 
         <div className="menu">
             <span className="MemuTag">Setting</span>
-          <div className="items">
+          <div className="items" style={{paddingLeft:"10px"}}>
 
             {darkMode ? <span className="Icon-Button"  onClick={toggle}>
           <span className="material-symbols-rounded">
@@ -55,7 +55,7 @@ wb_sunny
 
 
           </div>
-          <div className="items">
+          <div className="items" style={{paddingLeft:"10px"}}>
           <span className="material-symbols-rounded">
 manage_accounts
 </span>

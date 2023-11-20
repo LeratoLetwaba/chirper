@@ -6,14 +6,14 @@ const Rightbar = () => {
       <div className="container">
         <div className="item">
           <span className="MemuTag">Suggestion for you</span>
-          <hr />
+          <hr className="hrColor" />
           <div className="user">
             <div className="userInfo">
               <img
                 src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
                 alt="avatar"
               />
-              <span>Jan Doe</span>
+              <span className="followName">Jan Doe</span>
             </div>
             <button>Follow</button>
           </div>
@@ -24,7 +24,7 @@ const Rightbar = () => {
                 src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
                 alt="avatar"
               />
-              <span>Steven Jacson</span>
+              <span className="followName">Steven Jacson</span>
             </div>
             <button>Follow</button>
           </div>
@@ -35,7 +35,7 @@ const Rightbar = () => {
                 src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
                 alt="avatar"
               />
-              <span>Shaun Mason</span>
+              <span className="followName">Shaun Mason</span>
             </div>
             <button>Follow</button>
           </div>
@@ -43,7 +43,7 @@ const Rightbar = () => {
 
         <div className="item">
           <span className="MemuTag">Trends for you</span>
-          <hr />
+          <hr className="hrColor" />
           <div className="trend">
             <span>
               <strong>South Africa</strong>

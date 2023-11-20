@@ -1,4 +1,7 @@
+@import "../../../style.scss";
+
 .leftbar{
+    @include themify($themes){
     flex: 2;
     position: fixed;
     top: 80px;
@@ -9,9 +12,11 @@
     .container{
         padding: 20px;
         width: 220px;
+        padding-left: 10px;
         .menu{
           display: flex;
           flex-direction: column;
+          
          // gap: 20px;
             .items{
                 display: flex;
@@ -20,6 +25,7 @@
                 font-weight: bold;
                 cursor: pointer;
                 padding: 10px 0px;
+                color: themed("textColor");
 
                 .Icon-Button{
                     display: flex;
@@ -29,7 +35,7 @@
             }
 
             .items:hover{
-                background-color:#f7f7f7;
+                background-color: themed("sidebarBgLink");
                 display: flex;
                 align-items: center;
                // gap: 10px;
@@ -46,8 +52,24 @@
             }
         }
     }
-}
+
+    .rightLink{
+        padding-left: 10px;
+    }
 
 .MemuTag{
     color: #aeaeae;
+    padding-left: 10px;
+}
+
+.hrColor{
+    border-bottom: 1px solid themed("border");
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+}
 }

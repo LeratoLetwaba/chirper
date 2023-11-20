@@ -25,11 +25,11 @@ const Comments = () => {
       </div>
       {comments.map((comment) => (
         <>
-          <hr />
+          <hr className="hrColor" />
           <div className="comment">
             <img src={comment.profilePicture} alt="" />
             <div className="info">
-              <span>{comment.name}</span>
+              <span className="name">{comment.name}</span>
               <p>{comment.desc}</p>
 
               <div className="reaction">

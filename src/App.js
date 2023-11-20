@@ -36,7 +36,7 @@ function App() {
           style={{
             display: "flex",
             marginTop: "0px",
-            backgroundColor: "#fafafa",
+            backgroundColor: darkMode?"#191617":"#fafafa",
           }}
         >
           <LeftBar />

@@ -21,6 +21,15 @@
                 align-items: flex-start;
                 border-right: 1px solid themed("border");
 
+                .name{
+                    color:themed("textLinkColor");
+                    cursor: pointer;
+                }
+
+                .name:hover{
+                    color: #ab8bbd;
+                    cursor: pointer;
+                }
                
                 p{
                     color: themed("textColor");
@@ -40,6 +49,15 @@
                 color: themed("textColorSoft");
                 font-size: 11px;
             }
+        }
+
+        .hrColor{
+            border-bottom: 1px solid themed("border");
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
     }
 }
