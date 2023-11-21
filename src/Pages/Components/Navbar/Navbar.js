@@ -35,7 +35,7 @@ tag
 
         <div className="search">
           <span className="material-symbols-rounded Nav-Icon">search</span>
-          <input type="text" placeholder="Search" />
+          <input className="searchInput" type="text" placeholder="Search" />
         </div>
       </div>
 
@@ -46,7 +46,7 @@ face
 */}
 
         <div className="user">
-          <span>Lerato Letwaba</span>
+          <span className="userName">Lerato Letwaba</span>
           <img
             src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
             alt="avatar"

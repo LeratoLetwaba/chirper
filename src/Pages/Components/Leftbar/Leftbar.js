@@ -10,29 +10,29 @@ const Leftbar = () => {
         <div className="menu">
           <div className="items">
             <span className="material-symbols-rounded rightLink">tag</span>
-            <span>Trending</span>
+            <span className="linkName">Trending</span>
           </div>
           <div className="items">
             <span className="material-symbols-rounded rightLink">mail</span>
-            <span>Messsages</span>
+            <span className="linkName">Messsages</span>
           </div>
           <div className="items">
             <span className="material-symbols-rounded rightLink">favorite</span>
-            <span>Saved</span>
+            <span className="linkName">Saved</span>
           </div>
           <div className="items">
             <span className="material-symbols-rounded rightLink">group</span>
-            <span>Followers</span>
+            <span className="linkName">Followers</span>
           </div>
 
           <div className="items">
             <span className="material-symbols-rounded rightLink">add_reaction</span>
-            <span>Following</span>
+            <span className="linkName">Following</span>
           </div>
 
           <div className="items">
             <span className="material-symbols-rounded rightLink">description</span>
-            <span>CV</span>
+            <span className="linkName">CV</span>
           </div>
         </div>
 
@@ -46,11 +46,11 @@ const Leftbar = () => {
           <span className="material-symbols-rounded">
 nightlight
 </span>
-<span>Dark Mode</span></span> : <span className="Icon-Button"  onClick={toggle}>
+<span className="linkName">Dark Mode</span></span> : <span className="Icon-Button"  onClick={toggle}>
           <span className="material-symbols-rounded">
 wb_sunny
 </span>
-<span>Light Mode</span></span>}
+<span className="linkName">Light Mode</span></span>}
             
 
 
@@ -59,7 +59,7 @@ wb_sunny
           <span className="material-symbols-rounded">
 manage_accounts
 </span>
-            <span>Manage Account</span>
+            <span className="linkName">Manage Account</span>
           </div>
        
 

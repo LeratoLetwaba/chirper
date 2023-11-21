@@ -32,6 +32,12 @@
                 width: 300px;
                 background-color: transparent;
                 color: themed("textColor");
+
+                @media screen and (max-width: 848px) {
+       
+            display: none;
+        
+      }
             }
         }
     }
@@ -67,6 +73,26 @@
         color: themed("textColor");
         cursor: pointer;
     }
+
+    @media screen and (max-width: 848px) {
+        .search {
+            width: 24px;
+            margin-right: 20px;
+        }
+        .search:hover {
+            width: 350px;
+           
+        }
+        .search:hover input {
+            display: block;
+            z-index: 2;
+        }
+        .userName{
+            display: none;
+        }
+        
+
+      }
 }
 }
 
