@@ -6,7 +6,7 @@ const Leftbar = () => {
     const { toggle, darkMode } = useContext(DarkModeContext);
   return (
     <div className="leftbar">
-      <div className="container">
+      <div className="contain">
         <div className="menu">
           <div className="items">
             <span className="material-symbols-rounded rightLink">tag</span>

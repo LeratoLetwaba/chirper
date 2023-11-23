@@ -1,18 +1,22 @@
-@import "../../../style.scss";
+@import "../../../../style.scss";
 
-.leftbar{
+.leftbarHr{
     @include themify($themes){
     flex: 2;
     position: fixed;
-    top: 80px;
+    top: 70px;
+    height: 100vh;
+    background-color:themed("bg") ;
+    border-right: 1px solid themed("border");
     
    // height: 100vh;
    // overflow: scroll;
    // &::-webkit-scrollbar{display: none;}
     .contain{
         padding: 20px;
-        width: 220px;
+        width: 45px;
         padding-left: 10px;
+        padding-right: 15px;
         .menu{
           display: flex;
           flex-direction: column;
@@ -70,6 +74,12 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.linkName {
+    display: none;
+}
+
+
 
 @media screen and (max-width: 740px) {
     .linkName {

@@ -3,7 +3,7 @@ import "./rightbar.scss";
 const Rightbar = () => {
   return (
     <div className="rightbar">
-      <div className="container">
+      <div className="contain">
         <div className="item">
           <span className="MemuTag">Suggestion for you</span>
           <hr className="hrColor" />

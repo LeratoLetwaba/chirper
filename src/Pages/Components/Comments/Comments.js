@@ -35,12 +35,12 @@ const Comments = () => {
               <div className="reaction">
                 <div className="items">
                   <span className="material-symbols-rounded">chat_bubble</span>{" "}
-                  0 reply
+                  0 <span className="reactionName"> reply</span>
                 </div>
 
                 <div className="items">
                   <span className="material-symbols-rounded">heart_plus</span> 1
-                  Likes
+                  <span className="reactionName"> Likes</span>
                 </div>
               </div>
             </div>

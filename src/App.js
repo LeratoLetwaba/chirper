@@ -2,24 +2,26 @@ import "./app.scss";
 import "./App.css";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Registration/Registration";
-import Navbar from "./Pages/Components/Navbar/Navbar";
-import LeftBar from "./Pages/Components/Leftbar/Leftbar";
-import RightBar from "./Pages/Components/Rightbar/Rightbar";
+///import Navbar from "./Pages/Components/Navbar/Navbar";
+///import LeftBar from "./Pages/Components/Leftbar/Leftbar";
+///import RightBar from "./Pages/Components/Rightbar/Rightbar";
 import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
-import { useContext } from "react";
-import { DarkModeContext } from "./Pages/Context/darkModeContext";
+import Feed from "./Pages/Social/Feed";
+import HrDashboard from "./Pages/Hr/HrDashboard"
+//import { useContext } from "react";
+//import { DarkModeContext } from "./Pages/Context/darkModeContext";
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet,
+  //Outlet,
   Navigate,
 } from "react-router-dom";
 
 function App() {
   const currentUser = true;
-  const { darkMode } = useContext(DarkModeContext);
+ // const { darkMode } = useContext(DarkModeContext);
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to="/login" />;
@@ -28,7 +30,11 @@ function App() {
     return children;
   };
 
-  const Layout = () => {
+
+  
+ 
+
+  /*const Layout = () => {
     return (
       <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
@@ -47,14 +53,14 @@ function App() {
         </div>
       </div>
     );
-  };
+  };*/
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <ProtectedRoute>
-          <Layout />
+          <Feed />
         </ProtectedRoute>
       ),
       children: [
@@ -64,6 +70,28 @@ function App() {
         },
         {
           path: "/profile/:id",
+          element: <Profile />,
+        },
+      ] /* */,
+    },
+    {
+      path: "/hr",
+      element: (
+        <ProtectedRoute>
+          <HrDashboard />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "/hr",
+          element: <>
+            <div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+        </>,
+        },
+        {
+          path: "/hr/profile/:id",
           element: <Profile />,
         },
       ] /* */,

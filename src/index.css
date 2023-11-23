@@ -44,6 +44,8 @@ hr {
   border-right: none;
   margin-top: 20px;
   margin-bottom: 20px;
+  opacity: unset;
+  background-color: rgba(209, 209, 209, 0);;
 }
 
 *:focus {
@@ -64,4 +66,8 @@ a:hover{color: #6f428b;
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*, ::after, ::before {
+  box-sizing: unset;
 }

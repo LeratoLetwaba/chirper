@@ -8,7 +8,7 @@ const Posts = ({ post }) => {
   const liked = false;
   return (
     <div className="posts">
-      <div className="container">
+      <div className="contain">
         <div className="user">
           <div className="userInfo">
             <img src={post.profilePic} alt="" />
@@ -29,20 +29,20 @@ const Posts = ({ post }) => {
 
         <div className="info">
           <div className="items" onClick={() => setCommentOpen(!commentOpen)}>
-            <span class="material-symbols-rounded">chat_bubble</span> 1 Comments
+            <span class="material-symbols-rounded">chat_bubble</span> 1  <span className="reactionName">Comments</span>
           </div>
 
           <div className="items">
             {liked ? (
-              <span class="material-symbols-rounded">heart_minus</span>
+              <span className="material-symbols-rounded">heart_minus</span>
             ) : (
               <span className="material-symbols-rounded">heart_plus</span>
             )}{" "}
-            12 Likes
+            12 <span className="reactionName">Likes</span> 
           </div>
 
           <div className="items">
-            <span class="material-symbols-rounded">share</span> 2 shares
+            <span className="material-symbols-rounded">share</span> 2 <span className="reactionName">shares</span>
           </div>
         </div>
 
