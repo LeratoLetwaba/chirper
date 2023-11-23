@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { darkMode } = useContext(DarkModeContext);
-  const [isUserVisible, setUserVisible] = useState("");
+  const [isUserVisible, setUserVisible] = useState("show");
   const [isVisible, setVisible] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
