@@ -16,7 +16,7 @@ const Rightbar = () => {
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
+                src="https://images.pexels.com/photos/19137816/pexels-photo-19137816/free-photo-of-road-crossing-a-snow-covered-forest.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 alt="avatar"
               />
               <span className="followName">Jan Doe</span>
@@ -27,7 +27,7 @@ const Rightbar = () => {
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
+                src="https://images.pexels.com/photos/13093467/pexels-photo-13093467.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
               <span className="followName">Steven Jacson</span>
@@ -38,7 +38,7 @@ const Rightbar = () => {
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
+                src="https://images.pexels.com/photos/18506230/pexels-photo-18506230/free-photo-of-a-hummingbird-sitting-on-a-tree-branch.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
               <span className="followName">Shaun Mason</span>
