@@ -1,11 +1,17 @@
 import "./rightbar.scss";
 
 const Rightbar = () => {
+ // const queryParameters = new URLSearchParams(window.location.search)
+ // const type = queryParameters.get("type")
+ // const name = queryParameters.get("name")
+ const { pathname  } = window.location;
+  console.log(pathname)
   return (
     <div className="rightbar">
       <div className="contain">
         <div className="item">
-          <span className="MemuTag">Suggestion for you</span>
+          <span className="MemuTag">Suggestion for you </span>
+          
           <hr className="hrColor" />
           <div className="user">
             <div className="userInfo">
@@ -41,6 +47,10 @@ const Rightbar = () => {
           </div>
         </div>
 
+
+
+        {pathname !== "/trends" ?
+        <>
         <div className="item">
           <span className="MemuTag">Trends for you</span>
           <hr className="hrColor" />
@@ -108,6 +118,11 @@ const Rightbar = () => {
             <span className="material-symbols-rounded">more_horiz</span>
           </div>
         </div>
+        </> : ""
+
+}
+
+
       </div>
 
       <span className="footer">

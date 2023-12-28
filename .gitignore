@@ -10,6 +10,35 @@
 
 # production
 /build
+/public/boostrap.css
+
+
+
+/src/style.css.map
+/src/app.css.map
+/src/Pages/Registration/Registration.css.map
+/src/Pages/Registration/Registration.css
+/src/Pages/Profile/profile.css
+/src/Pages/Profile/profile.css.map
+/src/Pages/Login/login.css
+/src/Pages/Login/login.css.map
+/src/Pages/Home/home.css
+/src/Pages/Home/home.css.map
+/src/Pages/Components/Rightbar/rightbar.css
+/src/Pages/Components/Rightbar/rightbar.css.map
+/src/Pages/Components/Post/post.css
+/src/Pages/Components/Post/post.css.map
+/src/Pages/Components/Navbar/navbar.css
+/src/Pages/Components/Navbar/navbar.css.map
+/src/Pages/Components/Leftbar/leftbar.css
+/src/Pages/Components/Leftbar/leftbar.css.map
+/src/Pages/Components/comments/comments.css
+/src/Pages/Components/comments/comments.css.map
+/src/Pages/Components/Post/post.css
+/src/Pages/Components/Post/post.css.map
+/src/Pages/Components/Post/posts.css
+/src/Pages/Components/Post/posts.css.map
+
 
 # misc
 .DS_Store

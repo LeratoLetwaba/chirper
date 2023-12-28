@@ -21,13 +21,18 @@ const Comments = () => {
   return (
     <div className="comments">
       <div className="write">
-        <img src={""} alt="" />
+      <img className="avatar"
+            src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
+            alt="avatar"
+          />
+          <input type="text" placeholder="Write a comment" />
+          <span className="CommentLink"><span className="material-symbols-rounded">send</span></span>
       </div>
       {comments.map((comment) => (
         <>
           <hr className="hrColor" />
           <div className="comment">
-            <img src={comment.profilePicture} alt="" />
+            <img src={comment.profilePicture} alt="profilesPictures" />
             <div className="info">
               <span className="name">{comment.name}</span>
               <p>{comment.desc}</p>

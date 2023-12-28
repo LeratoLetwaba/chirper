@@ -1,0 +1,108 @@
+@import "../../../style.scss";
+
+.trends{
+    @include themify($themes){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    .contain{
+        padding: 20px;
+        border:  1px solid themed("border");
+        border-radius: 10px;
+        background-color: themed("bg");
+        width: 70%;
+        margin: auto;
+        .user{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .userInfo{
+                display: flex;
+                gap: 20px;
+
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    color: themed("textColor");
+
+                    .name{
+                        font-weight: bold;
+                        color: themed("textLinkColor");
+                    }
+
+                    .name:hover{
+                        font-weight: bold;
+                        color: #ab8bbd;
+                    }
+                    .date{
+                        font-size: 11px;
+                        
+                    }
+                }
+            }
+            span{
+                color: themed("textColor");
+            }
+        }
+        .content{
+            margin: 20px 0px;
+            color: themed("textColor");
+            img{
+                width: 100%;
+                max-height: 500px;
+                object-fit: cover;
+                margin-top: 20px;
+            }
+
+        }
+
+        
+        .info{
+            display: flex;
+            justify-content: space-between;
+            
+
+            .items{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                color:themed("textColor");
+            }
+        }
+    }
+
+    @media screen and (max-width: 1166px) {
+        .contain {
+            width: 80%;
+            margin-left: -10px;
+        }
+      }
+
+      @media screen and (max-width: 740px) {
+      
+        .contain{
+            width: 123%;
+    margin-left: -174px;
+    min-width: 280px;
+        }
+       
+      }
+
+      @media screen and (max-width: 600px) {
+      
+        .reactionName{
+            display: none;
+        }
+       
+      }
+
+  
+}}
