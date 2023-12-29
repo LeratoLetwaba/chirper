@@ -18,7 +18,6 @@ const Feed = () => {
           style={{
             display: "flex",
             marginTop: "0px",
-            height: "100vh",
             backgroundColor: darkMode?"#191617":"#fafafa",
           }}
         >
