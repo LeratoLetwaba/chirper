@@ -3,7 +3,7 @@
 import Navbar from "../Components/Navbar/Navbar";
 import LeftBar from "../Components/Leftbar/Leftbar";
 import RightBar from "../Components/Rightbar/Rightbar";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DarkModeContext } from "../Context/darkModeContext";
 import {
     Outlet,
@@ -11,6 +11,21 @@ import {
 
 const Feed = () => {
     const { darkMode } = useContext(DarkModeContext);
+    
+    let myColor;
+
+    if(darkMode){
+      myColor = "#191617";
+    } else {
+      myColor = "#fafafa";
+    }
+
+    useEffect(() => {
+      
+      document.body.style.backgroundColor = myColor;
+  
+    }, [darkMode]); 
+
     return (
       <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
@@ -18,7 +33,6 @@ const Feed = () => {
           style={{
             display: "flex",
             marginTop: "0px",
-            backgroundColor: darkMode?"#191617":"#fafafa",
           }}
         >
           <LeftBar />
