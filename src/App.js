@@ -10,6 +10,7 @@ import Profile from "./Pages/Profile/Profile";
 import Feed from "./Pages/Social/Feed";
 import HrDashboard from "./Pages/Hr/HrDashboard"
 import Trend from "./Pages/Components/Post/Trend"
+import Messages from "./Pages/Components/Message/Message";
 //import { useContext } from "react";
 //import { DarkModeContext } from "./Pages/Context/darkModeContext";
 
@@ -73,10 +74,13 @@ function App() {
           path: "/profile/:id",
           element: <Profile />,
         },
-        
         {
           path: "/trends",
           element:  <Trend />,
+        },
+        {
+          path: "/messages",
+          element:  <Messages />,
         },
       ] /* */,
     },

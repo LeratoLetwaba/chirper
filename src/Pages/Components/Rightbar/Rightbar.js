@@ -6,7 +6,9 @@ const Rightbar = () => {
  // const name = queryParameters.get("name")
  const { pathname  } = window.location;
   console.log(pathname)
-  return (
+  return (<>
+   {pathname !== "/messages" ?
+   <>
     <div className="rightbar">
       <div className="contain">
         <div className="item">
@@ -128,7 +130,10 @@ const Rightbar = () => {
       <span className="footer">
         Privacy · Terms · Contact Us · Cookies · Chirper © 2023
       </span>
-    </div>
+    </div></> : ""
+
+}
+    </>
   );
 };
 

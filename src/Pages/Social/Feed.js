@@ -18,14 +18,15 @@ const Feed = () => {
           style={{
             display: "flex",
             marginTop: "0px",
+            height: "100vh",
             backgroundColor: darkMode?"#191617":"#fafafa",
           }}
         >
           <LeftBar />
-          <div style={{ flex: 6, marginLeft: "270px" }}>
+          <div style={{ flex: 6, marginLeft: "270px", /*display:"flex", flexDirection:"row" */}}>
             <Outlet />
           </div>
-          <RightBar />
+         <RightBar />{/**/}
         </div>
       </div>
     );
