@@ -1,6 +1,20 @@
 import "./message.scss";
+import { useContext, useEffect } from "react";
+import { MyContext } from "../../../context";
 
 const Messages = () => {
+  const { updateRightBar } = useContext(MyContext);
+
+  useEffect(() => {
+    updateRightBar("message")
+  }, []);
+
+  let valueChange = () => {
+    updateRightBar("message")
+  }
+
+
+
   return (
     <div className="message">
       <div className="contain">
@@ -9,7 +23,7 @@ const Messages = () => {
             <div className="msg">
               <span style={{ width: "60%" }}>
                 {" "}
-                <button>New Message</button>
+                <button onClick={valueChange}>New Message</button>
               </span>
               <span className="material-symbols-rounded">
                 settings_applications

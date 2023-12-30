@@ -11,6 +11,7 @@ import Feed from "./Pages/Social/Feed";
 import HrDashboard from "./Pages/Hr/HrDashboard"
 import Trend from "./Pages/Components/Post/Trend"
 import Messages from "./Pages/Components/Message/Message";
+import { MyContextProvider } from "./context";
 //import { useContext } from "react";
 //import { DarkModeContext } from "./Pages/Context/darkModeContext";
 
@@ -61,9 +62,11 @@ function App() {
     {
       path: "/",
       element: (
+        <MyContextProvider>
         <ProtectedRoute>
           <Feed />
         </ProtectedRoute>
+        </MyContextProvider>
       ),
       children: [
         {

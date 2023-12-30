@@ -3,15 +3,21 @@ import logo from "../../../images/bird-04.png";
 import { useContext, useState, useEffect } from "react";
 import { DarkModeContext } from "../../Context/darkModeContext";
 import logoWhite from "../../../images/bird-05.png";
+import { MyContext } from "../../../context";
 //import logoIcon from "../../../images/bird-03.png";
 
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { darkMode } = useContext(DarkModeContext);
+  const { updateRightBar } = useContext(MyContext);
   const [isUserVisible, setUserVisible] = useState("show");
   const [isVisible, setVisible] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  let RightBarChangeHome = () => {
+    updateRightBar("")
+  }
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 639px)');
@@ -60,13 +66,13 @@ const Navbar = () => {
 
         {darkMode ? (
           <>
-            <Link to="/">
+            <Link onClick={RightBarChangeHome} to="/">
               <img src={logoWhite} alt="Logo" width="100px" />
             </Link>
           </>
         ) : (
           <>
-            <Link to="/">
+            <Link onClick={RightBarChangeHome} to="/">
               <img src={logo} alt="Logo" width="100px" />
             </Link>
           </>
@@ -93,8 +99,9 @@ const Navbar = () => {
           />
         </div>
 
-
+        <Link onClick={RightBarChangeHome} to="/">
         <span className="material-symbols-rounded Nav-Icon pro">home</span>
+        </Link>
 
         <span className="material-symbols-rounded Nav-Icon notification">notifications</span>
 

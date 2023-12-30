@@ -1,21 +1,40 @@
 import "./leftbar.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "../../Context/darkModeContext"
+import { Link } from "react-router-dom";
+import { MyContext } from "../../../context";
 
 const Leftbar = () => {
     const { toggle, darkMode } = useContext(DarkModeContext);
+    const { updateRightBar, RightBar } = useContext(MyContext);
+
+    const active = "items active";
+    const notActive = "items";
+
+    let RightBarChangeMessage = () => {
+      updateRightBar("message")
+    }
+
+    let RightBarChangeTrends = () => {
+      updateRightBar("trend")
+    }
+
   return (
     <div className="leftbar">
       <div className="contain">
         <div className="menu">
-          <div className="items">
+        <Link onClick={RightBarChangeTrends} to="/trends">
+          <div className={RightBar === "trend" ? active : notActive}>
             <span className="material-symbols-rounded rightLink">tag</span>
             <span className="linkName">Trending</span>
           </div>
-          <div className="items">
+        </Link>
+        <Link onClick={RightBarChangeMessage} to="/messages" >
+          <div className={RightBar === "message" ? active : notActive}>
             <span className="material-symbols-rounded rightLink">mail</span>
             <span className="linkName">Messsages</span>
           </div>
+          </Link>
           <div className="items">
             <span className="material-symbols-rounded rightLink">favorite</span>
             <span className="linkName">Saved</span>

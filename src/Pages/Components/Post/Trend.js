@@ -2,8 +2,15 @@
 import "./post.scss"
 //import Posts from "./Posts";
 import Trends from "./Trends";
+import { useContext, useEffect } from "react";
+import { MyContext } from "../../../context";
 
 const Trend = () => {
+  const { updateRightBar } = useContext(MyContext);
+
+  useEffect(() => {
+    updateRightBar("trend")
+  }, []);
 
   const trending = [
     {
