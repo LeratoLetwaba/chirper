@@ -15,6 +15,8 @@ import { MyContextProvider } from "./context";
 //import { useContext } from "react";
 //import { DarkModeContext } from "./Pages/Context/darkModeContext";
 
+//EG Git Example
+
 import {
   createBrowserRouter,
   RouterProvider,
