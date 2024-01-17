@@ -6,14 +6,12 @@ const Messages = () => {
   const { updateRightBar } = useContext(MyContext);
 
   useEffect(() => {
-    updateRightBar("message")
+    updateRightBar("message");
   }, []);
 
   let valueChange = () => {
-    updateRightBar("message")
-  }
-
-
+    updateRightBar("message");
+  };
 
   return (
     <div className="message">

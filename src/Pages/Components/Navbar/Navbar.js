@@ -16,11 +16,11 @@ const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   let RightBarChangeHome = () => {
-    updateRightBar("")
-  }
+    updateRightBar("");
+  };
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 639px)');
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
 
     // Initial check
     setIsSmallScreen(mediaQuery.matches);
@@ -31,39 +31,31 @@ const Navbar = () => {
     };
 
     // Add event listener for window resize
-    mediaQuery.addEventListener('change', handleResize);
+    mediaQuery.addEventListener("change", handleResize);
 
     // Clean up the event listener on component unmount
     return () => {
-      mediaQuery.removeEventListener('change', handleResize);
+      mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
 
   const handleSearchHover = () => {
     setUserVisible("Notshow");
-    setVisible(true)
+    setVisible(true);
   };
 
   const handleSearchLeave = () => {
     setUserVisible("show");
-    setVisible(false)
+    setVisible(false);
   };
 
-  
   const searchStyle = {
-    transition: isVisible ? 'width .0s ease' : 'width 0.4s ease',
+    transition: isVisible ? "width .0s ease" : "width 0.4s ease",
   };
-
-  
 
   return (
     <div className="navbar">
-
-
       <div className="left">
-
-      
-
         {darkMode ? (
           <>
             <Link onClick={RightBarChangeHome} to="/">
@@ -78,44 +70,43 @@ const Navbar = () => {
           </>
         )}
 
-       
-
-        <div className="search"  onMouseEnter={handleSearchHover} onMouseLeave={handleSearchLeave} style={searchStyle}>
+        <div
+          className="search"
+          onMouseEnter={handleSearchHover}
+          onMouseLeave={handleSearchLeave}
+          style={searchStyle}
+        >
           <span className="material-symbols-rounded Nav-Icon">search</span>
           <input className="searchInput" type="text" placeholder="Search" />
         </div>
       </div>
 
-       {isUserVisible && (
-        <div className={` ${isSmallScreen ? isUserVisible : ''}`}>
-      <div className="right">
-      
+      {isUserVisible && (
+        <div className={` ${isSmallScreen ? isUserVisible : ""}`}>
+          <div className="right">
+            <div className="user">
+              <span className="userName">Lerato Letwaba</span>
+              <img
+                className="avatar"
+                src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
+                alt="avatar"
+              />
+            </div>
 
-        <div className="user" >
-          <span className="userName" >Lerato Letwaba</span>
-          <img className="avatar"
-            src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-craig-adderley-1563356.jpg&fm=jpg"
-            alt="avatar"
-          />
+            <Link onClick={RightBarChangeHome} to="/">
+              <span className="material-symbols-rounded Nav-Icon pro">
+                home
+              </span>
+            </Link>
+
+            <span className="material-symbols-rounded Nav-Icon notification">
+              notifications
+            </span>
+
+            <span className="material-symbols-rounded Nav-Icon menu">menu</span>
+          </div>
         </div>
-
-        <Link onClick={RightBarChangeHome} to="/">
-        <span className="material-symbols-rounded Nav-Icon pro">home</span>
-        </Link>
-
-        <span className="material-symbols-rounded Nav-Icon notification">notifications</span>
-
-       
-        
-     
-    
-        <span className="material-symbols-rounded Nav-Icon menu">menu</span>
-
-        </div>
-      
-      </div>
-  )}
-
+      )}
     </div>
   );
 };
