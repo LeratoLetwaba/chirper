@@ -17,6 +17,7 @@ import Saved from "./Pages/Components/Saved/Save";
 import Teams from "./Pages/Components/Team/Team";
 import Messages from "./Pages/Components/Message/Message";
 import { MyContextProvider } from "./context";
+import Account from "./Pages/Components/Account/Account"
 //import { useContext } from "react";
 //import { DarkModeContext } from "./Pages/Context/darkModeContext";
 
@@ -100,6 +101,11 @@ function App() {
         {
           path: "/team",
           element:  <Teams />,
+        },
+        
+        {
+          path: "/account",
+          element:  <Account />,
         },
       ] /* */,
     },

@@ -25,6 +25,9 @@ const Leftbar = () => {
   let RightBarChangeTeam = () => {
     updateRightBar("team");
   };
+  let RightBarChangeAccout = () => {
+    updateRightBar("account");
+  };
 
   console.log(RightBar)
 
@@ -92,10 +95,21 @@ const Leftbar = () => {
               </span>
             )}
           </div>
+
+          <Link onClick={RightBarChangeAccout} to="/account">
           <div className="items" style={{ paddingLeft: "10px" }}>
             <span className="material-symbols-rounded">manage_accounts</span>
             <span className="linkName">Manage Account</span>
           </div>
+          </Link>
+
+          
+          <div className="items" style={{ paddingLeft: "10px" }}>
+            <span className="material-symbols-rounded">Logout</span>
+            <span className="linkName">Logout</span>
+          </div>
+       
+
         </div>
       </div>
     </div>
