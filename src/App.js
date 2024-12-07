@@ -2,6 +2,8 @@ import "./app.scss";
 import "./App.css";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Registration/Registration";
+//import Register from "./Pages/Registration/Registration";
+import Forget from "./Pages/Forget/Forget";
 ///import Navbar from "./Pages/Components/Navbar/Navbar";
 ///import LeftBar from "./Pages/Components/Leftbar/Leftbar";
 ///import RightBar from "./Pages/Components/Rightbar/Rightbar";
@@ -10,6 +12,9 @@ import Profile from "./Pages/Profile/Profile";
 import Feed from "./Pages/Social/Feed";
 import HrDashboard from "./Pages/Hr/HrDashboard"
 import Trend from "./Pages/Components/Post/Trend"
+//import Saves from "./Pages/Components/Saved/Save";
+import Saved from "./Pages/Components/Saved/Save";
+import Teams from "./Pages/Components/Team/Team";
 import Messages from "./Pages/Components/Message/Message";
 import { MyContextProvider } from "./context";
 //import { useContext } from "react";
@@ -87,6 +92,15 @@ function App() {
           path: "/messages",
           element:  <Messages />,
         },
+        
+        {
+          path: "/saved",
+          element:  <Saved />,
+        },
+        {
+          path: "/team",
+          element:  <Teams />,
+        },
       ] /* */,
     },
     {
@@ -118,6 +132,11 @@ function App() {
     {
       path: "/registration",
       element: <Register />,
+    },
+    
+    {
+      path: "/forgot-password",
+      element: <Forget />,
     },
   ]);
 

@@ -12,12 +12,12 @@ const Rightbar = () => {
  
   
   return (<>
-   {RightBar === "" ?
+   {RightBar === "" || RightBar === "saved" || RightBar === "team "?
    <>
     <div className="rightbar">
       <div className="contain">
         <div className="item">
-          <span className="MemuTag">Suggestion for you </span>
+          <span className="MemuTag">Communicated with Departments </span>
           
           <hr className="hrColor" />
           <div className="user">
@@ -26,9 +26,9 @@ const Rightbar = () => {
                 src="https://images.pexels.com/photos/19137816/pexels-photo-19137816/free-photo-of-road-crossing-a-snow-covered-forest.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 alt="avatar"
               />
-              <span className="followName">Jan Doe</span>
+              <span className="followName">Marketing</span>
             </div>
-            <button>Follow</button>
+            <button>Email</button>
           </div>
 
           <div className="user">
@@ -37,9 +37,9 @@ const Rightbar = () => {
                 src="https://images.pexels.com/photos/13093467/pexels-photo-13093467.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
-              <span className="followName">Steven Jacson</span>
+              <span className="followName">Sales</span>
             </div>
-            <button>Follow</button>
+            <button>Email</button>
           </div>
 
           <div className="user">
@@ -48,9 +48,9 @@ const Rightbar = () => {
                 src="https://images.pexels.com/photos/18506230/pexels-photo-18506230/free-photo-of-a-hummingbird-sitting-on-a-tree-branch.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
-              <span className="followName">Shaun Mason</span>
+              <span className="followName">IT</span>
             </div>
-            <button>Follow</button>
+            <button>Email</button>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const Rightbar = () => {
 
         
         <div className="item">
-          <span className="MemuTag">Trends for you</span>
+          <span className="MemuTag">Business Trends</span>
           <hr className="hrColor" />
           <div className="trend">
             <span>
@@ -70,7 +70,7 @@ const Rightbar = () => {
 
           <div className="trend">
             <span>
-              <strong>The EFF</strong>
+              <strong>Employee Policy</strong>
               <div className="trendingNumber">17k post</div>
             </span>
             <span className="material-symbols-rounded">more_horiz</span>
@@ -86,7 +86,7 @@ const Rightbar = () => {
 
           <div className="trend">
             <span>
-              <strong>Jenin</strong>
+              <strong>Forex</strong>
               <div className="trendingNumber">2.7k post</div>
             </span>
             <span className="material-symbols-rounded">more_horiz</span>
@@ -94,7 +94,7 @@ const Rightbar = () => {
 
           <div className="trend">
             <span>
-              <strong>Nkalakatha</strong>
+              <strong>Supply Chain</strong>
               <div className="trendingNumber">1.7k post</div>
             </span>
             <span className="material-symbols-rounded">more_horiz</span>
@@ -118,7 +118,7 @@ const Rightbar = () => {
 
           <div className="trend">
             <span>
-              <strong>All Black</strong>
+              <strong>Global Export Delay</strong>
               <div className="trendingNumber">14k post</div>
             </span>
             <span className="material-symbols-rounded">more_horiz</span>
@@ -147,7 +147,7 @@ const Rightbar = () => {
               />
               <span className="followName">Jan Doe</span>
             </div>
-            <button>Follow</button>
+            <button>Mail</button>
           </div>
 
           <div className="user">
@@ -158,7 +158,7 @@ const Rightbar = () => {
               />
               <span className="followName">Steven Jacson</span>
             </div>
-            <button>Follow</button>
+            <button>Mail</button>
           </div>
 
           <div className="user">
@@ -169,7 +169,7 @@ const Rightbar = () => {
               />
               <span className="followName">Shaun Mason</span>
             </div>
-            <button>Follow</button>
+            <button>Mail</button>
           </div>
         </div>
 

@@ -1,10 +1,10 @@
-import "./login.scss";
+import "./Forget.scss";
 import icon from "../../images/bird-03.png";
 import logo from "../../images/bird-05.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const Login = () => {
+const Forget = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
@@ -47,9 +47,14 @@ const Login = () => {
           {/*<h1>Hello chirper. </h1>*/}
           <img src={logo} alt="Logo" width="200px" />
           <p>
-          A workplace-focused platform offers an efficient solution to keep employees informed and engaged. It centralizes updates, announcements, and discussions, ensuring seamless communication across teams. With real-time notifications, it enhances transparency and fosters a connected, informed workforce.<br />
+            Join our vibrant community of chirper enthusiasts. Express yourself,
+            share your thoughts, and connect with like-minded people. It's time
+            to chirp, rechirp, and discover the latest trends. Dive into the
+            world of concise and impactful communication. Let your voice be
+            heard, one chirp at a time. <br />
             <strong>Get started now!</strong> <br />
             <br />
+           
           </p>
           {/* <span>Dont have an Account</span>
                     <button>Login</button>*/}
@@ -60,13 +65,12 @@ const Login = () => {
 
           <form>
             <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <button>Request Password</button>
             {/**/}
           </form>
           <div className="forgot-password">
-            <Link to="/forgot-password">Forgot Password? </Link> 
-            |         <Link to="/registration">Sign up</Link>
+            <Link to="/Login">Login </Link> 
+            |         <Link to="/Sign-Up">Sign up</Link>
           </div>
         </div>
       </div>
@@ -74,4 +78,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forget;

@@ -19,7 +19,7 @@ const Trend = () => {
     },
     {
       id: 2,
-      name: "The Eff",
+      name: "Employee Policy",
       posts: "17k",
     },
 
@@ -30,7 +30,7 @@ const Trend = () => {
     },
     {
       id: 4,
-      name: "Jenin",
+      name: "Forex",
       posts: "2.7k",
     },
     {
@@ -46,12 +46,12 @@ const Trend = () => {
 
     {
       id: 7,
-      name: "All Black",
+      name: "Forex",
       posts: "14k",
     },
     {
       id: 8,
-      name: "Civil War",
+      name: "Global Export Delay",
       posts: "74.7k",
     },
   ];

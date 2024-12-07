@@ -12,11 +12,7 @@ const Register = () => {
           {/*<h1>Hello chirper. </h1>*/}
           <img src={logo} alt="Logo" width="200px" />
           <p>
-            Join our vibrant community of chirper enthusiasts. Express yourself,
-            share your thoughts, and connect with like-minded people. It's time
-            to chirp, rechirp, and discover the latest trends. Dive into the
-            world of concise and impactful communication. Let your voice be
-            heard, one chirp at a time. <br />
+          A dedicated platform for workplaces simplifies employee communication by centralizing updates and announcements. It ensures teams stay informed through real-time notifications and mobile access, promoting transparency and enhancing engagement across the organization. <br />
             <strong>Get started now!</strong>
             <br />
             <br />
@@ -33,6 +29,7 @@ const Register = () => {
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Last Name" />
             <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Repeat Password" />
             {/* <button> Register</button>*/}
           </form>
         </div>

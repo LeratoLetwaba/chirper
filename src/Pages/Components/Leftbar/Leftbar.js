@@ -15,9 +15,18 @@ const Leftbar = () => {
     updateRightBar("message");
   };
 
+  let RightBarChangeSaved = () => {
+    updateRightBar("saved");
+  };
+
   let RightBarChangeTrends = () => {
     updateRightBar("trend");
   };
+  let RightBarChangeTeam = () => {
+    updateRightBar("team");
+  };
+
+  console.log(RightBar)
 
   return (
     <div className="leftbar">
@@ -35,15 +44,19 @@ const Leftbar = () => {
               <span className="linkName">Messsages</span>
             </div>
           </Link>
-          <div className="items">
+          <Link onClick={RightBarChangeSaved} to="/saved">
+          <div className={RightBar === "saved" ? active : notActive}>
             <span className="material-symbols-rounded rightLink">favorite</span>
             <span className="linkName">Saved</span>
           </div>
+          </Link>
+          <Link onClick={RightBarChangeTeam} to="/team">
           <div className="items">
             <span className="material-symbols-rounded rightLink">group</span>
-            <span className="linkName">Followers</span>
+            <span className="linkName">Team</span>
           </div>
-
+          </Link>
+{/*
           <div className="items">
             <span className="material-symbols-rounded rightLink">
               add_reaction
@@ -51,12 +64,15 @@ const Leftbar = () => {
             <span className="linkName">Following</span>
           </div>
 
+ 
           <div className="items">
             <span className="material-symbols-rounded rightLink">
               description
             </span>
             <span className="linkName">CV</span>
           </div>
+          */}
+
         </div>
 
         <hr className="hrColor" />

@@ -34,19 +34,34 @@
   -moz-osx-font-smoothing: grayscale;
             }
             p{line-height: 17px;}
+            a {
+               color: #fff; 
+            }
+            a:hover{color: #6f428b;
+                text-decoration: none;
+                }
             span{
                 font-size: 14px;
             }
             button{
                 margin-top: 20px;
                 width: 50%;
-                padding: 15px;
-                border-radius:30px ;
                 border: none;
                 background-color: #fff;
                 color: #333;
                 cursor: pointer;
+                padding: 0px;
             }
+            button:hover{
+                margin-top: 20px;
+                width: 50%;
+                border: none;
+                background-color: #6f428b;
+                color: #fff;
+                cursor: pointer;
+                padding: 0px;
+            }
+            
         }
         .right{
             flex: 1;
